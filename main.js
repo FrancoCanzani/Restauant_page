@@ -13,14 +13,39 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var _assets_logo_png__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../assets/logo.png */ "./src/assets/logo.png");
+/* harmony import */ var _assets_silverware_fork_knife_svg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../assets/silverware-fork-knife.svg */ "./src/assets/silverware-fork-knife.svg");
+/* harmony import */ var _assets_menu_svg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../assets/menu.svg */ "./src/assets/menu.svg");
+/* harmony import */ var _assets_phone_svg__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../assets/phone.svg */ "./src/assets/phone.svg");
+
+
+
 
 var content = document.getElementById("content");
 var createHeader = function createHeader() {
   var newHeader = document.createElement("header");
   content.appendChild(newHeader);
+  //   Logo
   var logoImg = document.createElement("img");
   logoImg.setAttribute("src", _assets_logo_png__WEBPACK_IMPORTED_MODULE_0__["default"]);
+  logoImg.classList.add("logo");
   newHeader.appendChild(logoImg);
+  //   Buttons
+
+  var buttonCreator = function buttonCreator(imgPath, btnText) {
+    var Btn = document.createElement("button");
+    var BtnImg = document.createElement("img");
+    BtnImg.setAttribute("src", imgPath);
+    BtnImg.classList.add("btnImg");
+    Btn.appendChild(BtnImg);
+    Btn.classList.add("Btn");
+    var BtnText = document.createElement("span");
+    BtnText.textContent = btnText;
+    Btn.appendChild(BtnText);
+    newHeader.appendChild(Btn);
+  };
+  buttonCreator(_assets_silverware_fork_knife_svg__WEBPACK_IMPORTED_MODULE_1__["default"], "Home");
+  buttonCreator(_assets_menu_svg__WEBPACK_IMPORTED_MODULE_2__["default"], "Menu");
+  buttonCreator(_assets_phone_svg__WEBPACK_IMPORTED_MODULE_3__["default"], "Contact");
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (createHeader);
 
@@ -44,8 +69,9 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
+___CSS_LOADER_EXPORT___.push([module.id, "@import url(https://fonts.googleapis.com/css2?family=Kanit:ital,wght@1,200&display=swap);"]);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "body {\n  background: wheat;\n}", "",{"version":3,"sources":["webpack://./src/styles/main.scss"],"names":[],"mappings":"AAAA;EACE,iBAAA;AACF","sourcesContent":["body {\r\n  background: wheat;\r\n}\r\n"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, "html,\nbody,\ndiv,\nspan,\napplet,\nobject,\niframe,\nh1,\nh2,\nh3,\nh4,\nh5,\nh6,\np,\nblockquote,\npre,\na,\nabbr,\nacronym,\naddress,\nbig,\ncite,\ncode,\ndel,\ndfn,\nem,\nimg,\nins,\nkbd,\nq,\ns,\nsamp,\nsmall,\nstrike,\nstrong,\nsub,\nsup,\ntt,\nvar,\nb,\nu,\ni,\ncenter,\ndl,\ndt,\ndd,\nol,\nul,\nli,\nfieldset,\nform,\nlabel,\nlegend,\ntable,\ncaption,\ntbody,\ntfoot,\nthead,\ntr,\nth,\ntd,\narticle,\naside,\ncanvas,\ndetails,\nembed,\nfigure,\nfigcaption,\nfooter,\nheader,\nhgroup,\nmenu,\nnav,\noutput,\nruby,\nsection,\nsummary,\ntime,\nmark,\naudio,\nvideo {\n  margin: 0;\n  padding: 0;\n  border: 0;\n  font-size: 100%;\n  font: inherit;\n  vertical-align: baseline;\n}\n\n/* HTML5 display-role reset for older browsers */\narticle,\naside,\ndetails,\nfigcaption,\nfigure,\nfooter,\nheader,\nhgroup,\nmenu,\nnav,\nsection {\n  display: block;\n}\n\nbody {\n  line-height: 1;\n}\n\nol,\nul {\n  list-style: none;\n}\n\nblockquote,\nq {\n  quotes: none;\n}\n\nblockquote:before,\nblockquote:after,\nq:before,\nq:after {\n  content: \"\";\n  content: none;\n}\n\ntable {\n  border-collapse: collapse;\n  border-spacing: 0;\n}\n\n#content {\n  height: 100vh;\n  background: wheat;\n  font-size: 16px;\n  font-family: \"Kanit\", sans-serif;\n}\n\nheader {\n  height: 10vh;\n  background: whitesmoke;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  position: relative;\n}\nheader .logo {\n  height: 7rem;\n  width: 7rem;\n  position: absolute;\n  left: 0;\n}\n\n.Btn {\n  background: whitesmoke;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  cursor: pointer;\n  font-family: inherit;\n  font-size: 1.5rem;\n  font-weight: bolder;\n  padding: 5px;\n  border: none;\n  border-radius: 5px;\n  transition: all 0.1s;\n  margin-right: 1rem;\n}\n.Btn .btnImg {\n  width: 1.5rem;\n  margin-right: 2px;\n}\n\n.Btn:hover {\n  border: 3px solid wheat;\n}\n\n.Btn:active {\n  box-shadow: 0px 2px 0px wheat;\n  position: relative;\n  top: 2px;\n}", "",{"version":3,"sources":["webpack://./src/styles/main.scss"],"names":[],"mappings":"AAEA;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;EAiFE,SAAA;EACA,UAAA;EACA,SAAA;EACA,eAAA;EACA,aAAA;EACA,wBAAA;AAAF;;AAEA,gDAAA;AACA;;;;;;;;;;;EAWE,cAAA;AACF;;AACA;EACE,cAAA;AAEF;;AAAA;;EAEE,gBAAA;AAGF;;AADA;;EAEE,YAAA;AAIF;;AAFA;;;;EAIE,WAAA;EACA,aAAA;AAKF;;AAHA;EACE,yBAAA;EACA,iBAAA;AAMF;;AAEA;EACE,aAAA;EACA,iBAAA;EACA,eAAA;EACA,gCANW;AAOb;;AAEA;EACE,YAAA;EACA,sBAAA;EACA,aAAA;EACA,uBAAA;EACA,mBAAA;EACA,kBAAA;AACF;AACE;EACE,YAAA;EACA,WAAA;EACA,kBAAA;EACA,OAAA;AACJ;;AAGA;EACE,sBAAA;EACA,aAAA;EACA,uBAAA;EACA,mBAAA;EACA,eAAA;EACA,oBAAA;EACA,iBAAA;EACA,mBAAA;EACA,YAAA;EACA,YAAA;EACA,kBAAA;EACA,oBAAA;EACA,kBAAA;AAAF;AAEE;EACE,aAAA;EACA,iBAAA;AAAJ;;AAIA;EACE,uBAAA;AADF;;AAIA;EACE,6BAAA;EACA,kBAAA;EACA,QAAA;AADF","sourcesContent":["// Reset\r\n\r\nhtml,\r\nbody,\r\ndiv,\r\nspan,\r\napplet,\r\nobject,\r\niframe,\r\nh1,\r\nh2,\r\nh3,\r\nh4,\r\nh5,\r\nh6,\r\np,\r\nblockquote,\r\npre,\r\na,\r\nabbr,\r\nacronym,\r\naddress,\r\nbig,\r\ncite,\r\ncode,\r\ndel,\r\ndfn,\r\nem,\r\nimg,\r\nins,\r\nkbd,\r\nq,\r\ns,\r\nsamp,\r\nsmall,\r\nstrike,\r\nstrong,\r\nsub,\r\nsup,\r\ntt,\r\nvar,\r\nb,\r\nu,\r\ni,\r\ncenter,\r\ndl,\r\ndt,\r\ndd,\r\nol,\r\nul,\r\nli,\r\nfieldset,\r\nform,\r\nlabel,\r\nlegend,\r\ntable,\r\ncaption,\r\ntbody,\r\ntfoot,\r\nthead,\r\ntr,\r\nth,\r\ntd,\r\narticle,\r\naside,\r\ncanvas,\r\ndetails,\r\nembed,\r\nfigure,\r\nfigcaption,\r\nfooter,\r\nheader,\r\nhgroup,\r\nmenu,\r\nnav,\r\noutput,\r\nruby,\r\nsection,\r\nsummary,\r\ntime,\r\nmark,\r\naudio,\r\nvideo {\r\n  margin: 0;\r\n  padding: 0;\r\n  border: 0;\r\n  font-size: 100%;\r\n  font: inherit;\r\n  vertical-align: baseline;\r\n}\r\n/* HTML5 display-role reset for older browsers */\r\narticle,\r\naside,\r\ndetails,\r\nfigcaption,\r\nfigure,\r\nfooter,\r\nheader,\r\nhgroup,\r\nmenu,\r\nnav,\r\nsection {\r\n  display: block;\r\n}\r\nbody {\r\n  line-height: 1;\r\n}\r\nol,\r\nul {\r\n  list-style: none;\r\n}\r\nblockquote,\r\nq {\r\n  quotes: none;\r\n}\r\nblockquote:before,\r\nblockquote:after,\r\nq:before,\r\nq:after {\r\n  content: \"\";\r\n  content: none;\r\n}\r\ntable {\r\n  border-collapse: collapse;\r\n  border-spacing: 0;\r\n}\r\n\r\n/////////////////////////////\r\n\r\n@import url(\"https://fonts.googleapis.com/css2?family=Kanit:ital,wght@1,200&display=swap\");\r\n$font-stack: \"Kanit\", sans-serif;\r\n\r\n#content {\r\n  height: 100vh;\r\n  background: wheat;\r\n  font-size: 16px;\r\n  font-family: $font-stack;\r\n}\r\n\r\nheader {\r\n  height: 10vh;\r\n  background: whitesmoke;\r\n  display: flex;\r\n  justify-content: center;\r\n  align-items: center;\r\n  position: relative;\r\n\r\n  .logo {\r\n    height: 7rem;\r\n    width: 7rem;\r\n    position: absolute;\r\n    left: 0;\r\n  }\r\n}\r\n\r\n.Btn {\r\n  background: whitesmoke;\r\n  display: flex;\r\n  justify-content: center;\r\n  align-items: center;\r\n  cursor: pointer;\r\n  font-family: inherit;\r\n  font-size: 1.5rem;\r\n  font-weight: bolder;\r\n  padding: 5px;\r\n  border: none;\r\n  border-radius: 5px;\r\n  transition: all 0.1s;\r\n  margin-right: 1rem;\r\n\r\n  .btnImg {\r\n    width: 1.5rem;\r\n    margin-right: 2px;\r\n  }\r\n}\r\n\r\n.Btn:hover {\r\n  border: 3px solid wheat;\r\n}\r\n\r\n.Btn:active {\r\n  box-shadow: 0px 2px 0px wheat;\r\n  position: relative;\r\n  top: 2px;\r\n}\r\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -182,6 +208,48 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "images/logo.png");
+
+/***/ }),
+
+/***/ "./src/assets/menu.svg":
+/*!*****************************!*\
+  !*** ./src/assets/menu.svg ***!
+  \*****************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "images/menu.svg");
+
+/***/ }),
+
+/***/ "./src/assets/phone.svg":
+/*!******************************!*\
+  !*** ./src/assets/phone.svg ***!
+  \******************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "images/phone.svg");
+
+/***/ }),
+
+/***/ "./src/assets/silverware-fork-knife.svg":
+/*!**********************************************!*\
+  !*** ./src/assets/silverware-fork-knife.svg ***!
+  \**********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + "images/silverware-fork-knife.svg");
 
 /***/ }),
 
