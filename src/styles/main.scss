@@ -129,13 +129,16 @@ table {
 
 @import url("https://fonts.googleapis.com/css2?family=Kanit:ital,wght@1,200&display=swap");
 $font-stack: "Kanit", sans-serif;
+$primary-color: #ffcf4a;
 
 #content {
   height: 100vh;
-  background: wheat;
+  background: $primary-color;
   font-size: 16px;
   font-family: $font-stack;
 }
+
+// Header
 
 header {
   height: 10vh;
@@ -151,6 +154,19 @@ header {
     position: absolute;
     left: 0;
   }
+}
+
+header::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 21px 21px 0 21px;
+  border-color: whitesmoke transparent transparent transparent;
+  left: 50%;
+  transform: translateX(-50%) translateY(100%);
 }
 
 .Btn {
@@ -175,11 +191,50 @@ header {
 }
 
 .Btn:hover {
-  border: 3px solid wheat;
+  border: 3px solid $primary-color;
 }
 
 .Btn:active {
-  box-shadow: 0px 2px 0px wheat;
+  box-shadow: 0px 2px 0px $primary-color;
   position: relative;
   top: 2px;
+}
+
+// Home content
+
+.homeContent {
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .leftContent {
+    width: 50%;
+    text-align: start;
+
+    .mainText {
+      font-size: 4vw;
+      font-weight: 200;
+      margin-left: 4rem;
+    }
+
+    .secondText {
+      font-size: 7vw;
+      font-weight: bolder;
+      margin-left: 4rem;
+      color: white;
+    }
+  }
+
+  .rightContent {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .burgerImg {
+      width: 80%;
+      height: 80%;
+    }
+  }
 }

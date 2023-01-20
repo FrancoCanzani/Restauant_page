@@ -8,13 +8,14 @@ const content = document.getElementById("content");
 const createHeader = () => {
   const newHeader = document.createElement("header");
   content.appendChild(newHeader);
+
   //   Logo
   const logoImg = document.createElement("img");
   logoImg.setAttribute("src", logo);
   logoImg.classList.add("logo");
   newHeader.appendChild(logoImg);
-  //   Buttons
 
+  //   Buttons
   const buttonCreator = (imgPath, btnText) => {
     const Btn = document.createElement("button");
     const BtnImg = document.createElement("img");
