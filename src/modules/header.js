@@ -2,12 +2,11 @@ import logo from "../assets/logo.png";
 import home from "../assets/silverware-fork-knife.svg";
 import menu from "../assets/menu.svg";
 import phone from "../assets/phone.svg";
-
-const content = document.getElementById("content");
+import { content } from "./menu";
 
 const createHeader = () => {
   const newHeader = document.createElement("header");
-  content.appendChild(newHeader);
+  document.querySelector("body").insertBefore(newHeader, content);
 
   //   Logo
   const logoImg = document.createElement("img");
