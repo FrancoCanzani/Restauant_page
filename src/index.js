@@ -3,4 +3,5 @@ import createHeader from "./modules/header.js";
 import createHome from "./modules/home";
 
 createHeader();
-createHome();
+
+ContextReplacementPlugin.
