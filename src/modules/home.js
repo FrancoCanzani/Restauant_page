@@ -11,7 +11,7 @@ const createHome = () => {
   homeContent.appendChild(leftContent);
   homeContent.appendChild(rightContent);
 
-  //   Burger image
+  //   Burger image on right content
   const burgerImg = document.createElement("img");
   burgerImg.setAttribute("src", burger);
   burgerImg.classList.add("burgerImg");
@@ -27,6 +27,15 @@ const createHome = () => {
   secondText.classList.add("secondText");
   secondText.innerHTML = "Burgers for Programmers";
   leftContent.appendChild(secondText);
+
+  //   Div on left content
+  const discount = document.createElement("div");
+  discount.classList.add("discount");
+  leftContent.appendChild(discount);
+  const discountText = document.createElement("h1");
+  discountText.classList.add("discountText");
+  discountText.innerHTML = "Get 25% off if you can center a Div";
+  discount.appendChild(discountText);
 };
 
 export default createHome;

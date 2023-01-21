@@ -4,4 +4,4 @@ import createHome from "./modules/home";
 
 createHeader();
 
-ContextReplacementPlugin.
+createHome();
